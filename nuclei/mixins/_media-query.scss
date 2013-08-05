@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    MIXIN - $MEDIA-QUERY
+\*------------------------------------*/
+
+/**
+ * Media query mixin.
+ * 
+   eg:.logo{
+           @include media-query(75em,99.9em){
+           width:8em;
+           }
+       }
+       will be
+       @media only screen and (min-width:75em) and (max-width:99.9em)
+       {
+       .logo{width:8em;}
+       }
+ *
+ * NOTE: use 0 for $start when there is no min-width  
+ */
+
+@mixin media-query($start,$end:$start){
+ @if ($start>0) and ($end>$start){
+  @media only screen and (min-width:$start) and (max-width:$end){@content;}
+ }
+ @if ($start>0) and ($end==$start){
+  @media only screen and (min-width:$start){@content;}
+ }
+ @if ($start==0) and ($end>$start){
+  @media only screen and (max-width:$end){@content;}
+ }
+}

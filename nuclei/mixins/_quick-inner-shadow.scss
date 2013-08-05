@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    MIXIN - $QUICK-INNER-SHADOW
+\*------------------------------------*/
+
+/**
+*
+* Quick inner shadow mixin
+ 
+  @include quick-inner-shadow(#abc);
+
+* pass a color for the shadow(defaults to #333)
+*/
+
+@mixin quick-inner-shadow($color:#333) {
+    -webkit-box-shadow: 1px 1px 2px $color inset;
+       -moz-box-shadow: 1px 1px 2px $color inset;
+            box-shadow: 1px 1px 2px $color inset;
+}

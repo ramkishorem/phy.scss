@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    $PROPERTIES
+\*------------------------------------*/
+
+/**
+ * phy.scss’ global variables. 
+ */
+
+/** 
+ * Treat the imports as table of contents and search with $<module name> to find the module
+ */
+
+@import "border-box";
+@import "font";
+@import "font-sizes";
+@import "brand";
+@import "ui";
+@import "links";
+@import "success-failure";
+@import "responsive";
+@import "quotes";
+@import "spacing";
+@import "paths";

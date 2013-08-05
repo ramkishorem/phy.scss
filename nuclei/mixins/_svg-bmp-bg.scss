@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    MIXIN - $SVG-BMP-BG
+\*------------------------------------*/
+
+/** 
+ *     svg with bitmap fallback
+ * falls back when js is disable or there is no svg support
+ *
+   .facebook {
+       @include svg-and-png('.facebook','fb.svg','fb.png');
+   }
+ * 
+ * Note : data-url can be used too
+ *
+ * NOTE : the svg, no-js, no-svg classes need the apporpriate modules 
+ * imported from Modernizr.js, the feature detection library
+ */
+
+@mixin svg-and-png($object, $svg, $png) {
+  .svg #{$object} {
+    background-image: url($svg);
+  }
+  .no-js #{$object}, .no-svg #{$object} {
+    background-image: url($png);
+  }
+}

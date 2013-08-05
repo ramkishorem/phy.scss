@@ -1,0 +1,9 @@
+/*------------------------------------*\
+    $BORDER-BOX
+\*------------------------------------*/
+/**
+ * Do you want all elements to adopt `box-sizing:border-box;` as per
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ * applied to *{} in reset module, if set to true
+ */
+ $global-border-box: true;

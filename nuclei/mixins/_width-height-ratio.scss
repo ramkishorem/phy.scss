@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    MIXIN - $WIDTH-HEIGHT-RATIO
+\*------------------------------------*/
+
+/**
+ * To set height relative to width(usually used to make  object inside it positioned abosolutely)
+ *
+   @include height-equals-width-percent(50%, 0.8);
+ *
+ * pass the width of the parent element and the ratio(defaults to 1 to make a square element)
+ *
+ */
+
+@mixin width-height-ratio($width, $ratio:1){
+    width:$width;
+    padding-bottom:$width * $ratio;
+}

@@ -13,14 +13,26 @@ get to the section that you need.
 
 
 
+
+
+/*properties*/
+
+@import "properties/properties";
+
 /*nuclie*/
 
-@import "nuclie/properties";
-@import "nuclie/normalize";
-@import "nuclie/reset";
+@import "nuclei/mixins";
+@import "nuclei/normalize";
+@import "nuclei/reset";
 
 /*quarks*/
 
+
+
 /*atoms*/
 
+
+
 /*molecules*/
+
+

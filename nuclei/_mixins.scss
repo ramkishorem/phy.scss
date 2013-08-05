@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+
+/**
+ * phy.scss’ list of used mixins.
+ */
+
+ /** 
+ * Treat the imports as table of contents and search with $<module name> to find the module
+ */
+
+ @import "mixins/font-size";
+ @import "mixins/headings";
+ @import "mixins/vendor";
+ @import "mixins/keyframe";
+ @import "mixins/truncate";
+ @import "mixins/arrow";
+ @import "mixins/media-query";
+ @import "mixins/opacity";
+ @import "mixins/width-height-ratio";
+ @import "mixins/svg-bmp-bg";
+ @import "mixins/quick-inner-shadow";
