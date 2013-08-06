@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    MIXIN - $PX-REM
+\*------------------------------------*/
+
+/**
+ * Mixin to set px and rem values for the given property
+ * pass px value
+ */
+
+@mixin px-rem($property, $value) {
+	#{$property}:$value;
+    #{$property}:($value / $base-font-size)*1rem;
+}
+    

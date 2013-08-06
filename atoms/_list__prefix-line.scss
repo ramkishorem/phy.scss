@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    $LIST__PREFIX-LINE
+\*------------------------------------*/
+
+/*
+For the line that  comes above a list of items as a prefix-line
+
+eg:
+    <p class="list__prefix-line">This basket consists of</p>
+    <ul>
+        <li>an apple</li>
+        <li>2 oranges</li>
+        <li>add the other charges amount, if any</li>
+        <li>add medicine and book products</li>
+        <li>scratch current bill to clear everything in it</li>
+        <li>commit the current bill to the database</li>
+    </ul>
+
+this object sets the margin below the prefix element to half spacing unit
+*/
+
+.list__prefix-line {
+    @extend %half-bottom-spacing;
+}

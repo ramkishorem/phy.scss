@@ -8,18 +8,10 @@
  * and over in your markup.
  */
  
- @mixin cf {
+.cf{
     &:after{
         content:"";
         display:table;
         clear:both;
     } 	
- }
-
- /**
-  * creating a class for some quick fix situations
-  */
-
-.cf{
-	@include cf;
 }
