@@ -1,2 +1,2 @@
-sass --watch phy.scss:../css/style.css --style nested
+sass --watch phy.scss:../css/style.min.css --style compressed
 
