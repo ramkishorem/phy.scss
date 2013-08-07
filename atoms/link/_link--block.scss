@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    $LINK--BLOCK
+\*------------------------------------*/
+
+.link--block {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	&:hover {
+		/**
+		 * style hover effects according to project theme
+		 */
+	}
+}

@@ -33,6 +33,7 @@ get to the section that you need.
 /*------QUARKS------*/
 @import "quarks/html";
 @import "quarks/headings";
+@import "quarks/link";
 @import "quarks/lists";
 @import "quarks/img";
 @import "quarks/fieldset";
@@ -44,6 +45,11 @@ get to the section that you need.
 
 	/*heading stuff*/
 	@import "atoms/heading/hgroup__hN";
+
+	/*link stuff*/
+	@import "atoms/link/link--block";
+	@import "atoms/link/link--inline-block";
+	@import "atoms/link/link--more";
 
 	/*image stuff*/
 	@import "atoms/image/blanket";
@@ -67,3 +73,7 @@ get to the section that you need.
 
 
 /*------MOLECULES------*/
+
+	/*link stuff*/
+	@import "molecules/link/link--header";
+	@import "molecules/link/link--tr";

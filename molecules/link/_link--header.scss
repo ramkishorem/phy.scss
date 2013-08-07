@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    $LINK--HEADER
+\*------------------------------------*/
+
+$link-header-padding: $half-spacing-unit/2;
+
+.link--header {
+	text-decoration: none;
+	color: $base-font-color;
+	display: inline-block;
+
+	padding: $link-header-padding;
+	/*negative margin to cancel offset created by the padding*/
+	margin: -$link-header-padding;
+
+	&:hover, &:focus, &:active {
+		background-color: $brand-color;
+		color: $brand-color-complement;
+	}
+}

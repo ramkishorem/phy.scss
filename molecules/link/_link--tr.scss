@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    $LINK--TR
+\*------------------------------------*/
+/**
+ *
+ * table row link, extends from inline-block link, the padding reset on cells 
+ * and addition of padding on links is done in table file
+ *
+ */
+.link--tr {
+	&:hover {
+		a {
+			color: $brand-color;
+		}
+	}
+	
+	a {
+		@extend .link--inline-block;
+	}
+}

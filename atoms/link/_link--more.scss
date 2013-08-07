@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    $LINK--MORE
+\------------------------------------*/
+
+/**
+ * for 'read on'/'full post' links that need ellipsis before them
+ */
+
+.link--more, 
+/**
+ * more-link for backwards compatibility with my previous habit
+ */
+.more-link {
+	&:before {
+		content:"...";
+	}
+}
