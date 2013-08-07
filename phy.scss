@@ -15,35 +15,41 @@ get to the section that you need.
 
 
 
-/*properties*/
-
+/*------PROPERTIES------*/
 @import "properties/properties";
 
-/*nuclie*/
 
+/*------NUCLEI------*/
 @import "nuclei/mixins";
 @import "nuclei/normalize";
 @import "nuclei/reset";
 @import "nuclei/clearfix";
 @import "nuclei/base-spacing";
 
-/*quarks*/
+
+/*------QUARKS------*/
 @import "quarks/html";
 @import "quarks/code";
 @import "quarks/fieldset";
 
-/*atoms*/
-@import "atoms/check-list";
-@import "atoms/code-comment";
-@import "atoms/form-fields";
-@import "atoms/help-text";
-@import "atoms/label";
-@import "atoms/line-numbers";
-@import "atoms/spoken-form";
-@import "atoms/success-failure";
-@import "atoms/text-input";
-@import "atoms/list__prefix-line";
 
-/*molecules*/
+/*------ATOMS------*/
+
+	/*code related stuf*/
+	@import "atoms/code/line-numbers";
+	@import "atoms/code/code-comment";
+
+	/*form related stuf*/
+	@import "atoms/form/check-list";
+	@import "atoms/form/form-fields";
+	@import "atoms/form/help-text";
+	@import "atoms/form/label";
+	@import "atoms/form/spoken-form";
+	@import "atoms/form/success-failure";
+	@import "atoms/form/text-input";
+
+	/*list related stuf*/
+	@import "atoms/list/list__prefix-line";
 
 
+/*------MOLECULES------*/
