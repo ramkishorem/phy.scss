@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    $CODE-COMMENT
+\*------------------------------------*/
+
+/**
+ * Add comments to your code examples, e.g.:
+ *
+   <code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
+ *
+ */
+
+.code-comment {
+    @include opacity(0.75);
+}

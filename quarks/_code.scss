@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    $CODE
+\*------------------------------------*/
+
+code,
+kbd,
+pre,
+samp {
+    font-family: $base-monospace-face;
+}
+
+/**
+ * Use an explicit font stack to ensure browsers render correct `line-height`.
+ */
+    pre mark {
+        background:none;
+        border-bottom:1px solid;
+        color:inherit;
+    }

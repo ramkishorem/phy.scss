@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    $FORM-FIELDS
+\*------------------------------------*/
+
+/**
+ * Group sets of form fields in a list, e.g.:
+ *
+   <ul class=form-fields>
+       <li>
+           <label />
+           <input />
+       </li>
+       <li>
+           <label />
+           <select />
+       </li>
+       <li>
+           <label />
+           <input />
+       </li>
+   </ul>
+ *
+ */
+
+.form-fields {
+    list-style:none;
+    margin:0;
+}
+    .form-fields > li {
+        @extend %sass-margin-bottom;
+    }
+    .form-fields > li:last-child {
+        margin-bottom:0;
+    }

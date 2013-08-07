@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    $CHECK-LIST
+\*------------------------------------*/
+
+/*
+ * Groups of checkboxes and radios, e.g.:
+ *
+   <li>
+       <ul class=check-list>
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+       </ul>
+   </li>
+ *
+ */
+
+.check-list {
+    list-style:none;
+    margin:0;
+}
+    /*
+     * Labels in check-lists
+     */
+    .check-label,
+    .check-list label,
+    .check-list .label {
+        display:inline-block;
+    }

@@ -1,0 +1,47 @@
+/*------------------------------------*\
+	$LABEL
+\*------------------------------------*/
+
+/**
+ * Labels
+ *
+ * Define a `.label` class as well as a `label` element. This means we can apply
+ * label-like styling to meta-labels for groups of options where a `label`
+ * element is not suitable, e.g.:
+ *
+   <li>
+	   <span class=label>Select an option below:</span>
+	   <ul class="multi-list  four-cols">
+		   <li>
+			   <input /> <label />
+		   </li>
+		   <li>
+			   <input /> <label />
+		   </li>
+		   <li>
+			   <input /> <label />
+		   </li>
+		   <li>
+			   <input /> <label />
+		   </li>
+	   </ul>
+   </li>
+ *
+ */
+
+label,
+.label {
+	display:block;
+}
+
+/**
+ * Extra help text in `label`s, e.g.:
+ *
+   <label>Card number <small class=additional>No spaces</small></label>
+ *
+ */
+
+.label__additional{
+    display:block;
+    font-weight:normal;
+}
