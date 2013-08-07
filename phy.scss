@@ -27,12 +27,14 @@ get to the section that you need.
 @import "nuclei/base-spacing";
 @import "nuclei/type-globals";
 @import "nuclei/auto-margin";
+@import "nuclei/borders";
 
 
 /*------QUARKS------*/
 @import "quarks/html";
 @import "quarks/headings";
 @import "quarks/lists";
+@import "quarks/img";
 @import "quarks/fieldset";
 @import "quarks/rule";
 @import "quarks/code";
@@ -43,9 +45,12 @@ get to the section that you need.
 	/*heading stuff*/
 	@import "atoms/heading/hgroup__hN";
 
-	/*code stuf*/
-	@import "atoms/code/line-numbers";
-	@import "atoms/code/code-comment";
+	/*image stuff*/
+	@import "atoms/image/blanket";
+	@import "atoms/image/placement";
+
+	/*list stuff*/
+	@import "atoms/list/list__prefix-line";
 
 	/*form stuf*/
 	@import "atoms/form/check-list";
@@ -56,8 +61,9 @@ get to the section that you need.
 	@import "atoms/form/success-failure";
 	@import "atoms/form/text-input";
 
-	/*list stuf*/
-	@import "atoms/list/list__prefix-line";
+	/*code stuf*/
+	@import "atoms/code/line-numbers";
+	@import "atoms/code/code-comment";
 
 
 /*------MOLECULES------*/
