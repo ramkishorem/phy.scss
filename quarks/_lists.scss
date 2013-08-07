@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    $LISTS
+\*------------------------------------*/
+
+/**
+ * apply the global double base-spaced left margin to all lists
+ */
+
+ul,ol,dd {
+    @extend %double-left-margin; 
+}

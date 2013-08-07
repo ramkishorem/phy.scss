@@ -6,7 +6,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: $base-monospace-face;
+    @extend %base-monospace-face;
 }
 
 /**

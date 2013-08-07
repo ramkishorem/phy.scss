@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    $HGROUP__HN
+\*------------------------------------*/
+
+/**
+ * Heading groups and generic any-heading class.
+ *
+   <hgroup>
+       <h1 class=hgroup__hN>phy.scss</h1>
+       <h2 class=hgroup__hN>A Sass Framework</h2>
+   </hgroup>
+ *
+ */
+
+.hgroup__hN, 
+/**
+ * adding this second part for sidewards compatibility with inuit.css
+ */
+hgroup .hN {
+    margin-bottom:0;
+}

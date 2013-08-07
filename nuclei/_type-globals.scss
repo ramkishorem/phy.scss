@@ -1,0 +1,70 @@
+/*------------------------------------*\
+    $TYPE-GLOBALS
+\*------------------------------------*/
+
+/**
+ * sizes related to heading levels
+ */
+
+.alpha {
+    @include font-size($h1-size);
+}
+.beta {
+    @include font-size($h2-size);
+}
+.gamma {
+    @include font-size($h3-size);
+}
+.delta {
+    @include font-size($h4-size);
+}
+.epsilon {
+    @include font-size($h5-size);
+}
+.zeta {
+    @include font-size($h6-size);
+}
+
+
+
+
+
+/**
+ * A series of classes for setting massive type; for use in heroes, mastheads,
+ * promos, etc.
+ */
+
+.giga {
+    @include font-size($giga-size);
+}
+.mega {
+    @include font-size($mega-size);
+}
+.kilo {
+    @include font-size($kilo-size);
+}
+
+
+
+
+
+/**
+ * A series of classes for setting smaller type; for use in footers, post-times etc.
+ */
+.milli {
+    @include font-size($milli-size);
+}
+.micro {
+    @include font-size($micro-size);
+}
+
+
+
+
+
+/**
+ * using a silent class to set monospace font-family at various places to reduce some size
+ */
+%base-monospace-face {
+    font-family:$base-monospace-face;
+}

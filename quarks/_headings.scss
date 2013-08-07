@@ -1,0 +1,28 @@
+/*------------------------------------*\
+	$HEADINGS
+\*------------------------------------*/
+/**
+ * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+ *
+ * When we define a heading we also define a corresponding class to go with it.
+ * This allows us to apply, say, `class=alpha` to a `h3`; a double-stranded
+ * heading hierarchy.
+ */
+h1 {
+	@extend .alpha;
+}
+h2 {
+	@extend .beta;
+}
+h3 {
+	@extend .gamma;
+}
+h4 {
+	@extend .delta;
+}
+h5 {
+	@extend .epsilon;
+}
+h6 {
+	@extend .zeta;
+}

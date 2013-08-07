@@ -12,20 +12,30 @@
  * base line-height. This allows us to keep a consistent vertical rhythm.
  * As per: csswizardry.com/2012/06/single-direction-margin-declarations
  */
+%sass-margin-bottom,
 %base-bottom-spacing {
     @include px-rem(margin-bottom, $base-spacing-unit);
 }
 
 %half-bottom-spacing {
-	@include px-rem(margin-bottom, $base-spacing-unit/2);
+	@include px-rem(margin-bottom, $base-spacing-unit / 2);
 }
 
 %double-bottom-spacing {
-	@include px-rem(margin-bottom, $base-spacing-unit*2);
+	@include px-rem(margin-bottom, $base-spacing-unit * 2);
 }
 
+%double-left-margin {
+    @include px-rem(margin-left, $base-spacing-unit * 2)
+}
+
+
+
+
+
 /**
- * Base elements
+ * Setting the bottom margin for some Base elements and classes 
+ * to keep the consistency
  */
 h1,h2,h3,hgroup,
 ul,ol,dl,
@@ -36,13 +46,11 @@ pre,
 /**
  * basic Objects and abstractions
  */
-%sass-margin-bottom,
-.media,
 .island,
-.islet{
+.islet {
     @extend %base-bottom-spacing;
 
-    .islet &{
+    .islet & {
     	@extend %half-bottom-spacing;
     }
 }
@@ -54,24 +62,6 @@ h4,h5,h6 {
 /**
  * Doubled up `margin-bottom` helper class.
  */
-.landmark{
-    @extend %double-bottom-spacing;
-}
-
-
-/**
- * `hr` elements only take up a few pixels, so we need to give them special
- * treatment regarding vertical rhythm.
- */
-hr{
-    @include px-rem(margin-bottom, ($base-spacing-unit - 2px));
-}
-
-
-/**
- * Where `margin-left` is concerned we want to try and indent certain elements
- * by a consistent amount. Define that amount once, here.
- */
-ul,ol,dd{
+.landmark {
     @extend %double-bottom-spacing;
 }

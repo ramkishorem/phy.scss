@@ -26,7 +26,7 @@
  */
 
 .line-numbers {
-    font-family:$base-monospace-face;       /* [1] */
+    @extend %base-monospace-face;           /* [1] */
     list-style:decimal-leading-zero inside; /* [2] */
     white-space:nowrap;                     /* [3] */
     overflow:auto;                          /* [3] */

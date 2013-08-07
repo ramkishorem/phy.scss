@@ -25,21 +25,28 @@ get to the section that you need.
 @import "nuclei/reset";
 @import "nuclei/clearfix";
 @import "nuclei/base-spacing";
+@import "nuclei/type-globals";
 
 
 /*------QUARKS------*/
 @import "quarks/html";
-@import "quarks/code";
+@import "quarks/headings";
+@import "quarks/lists";
 @import "quarks/fieldset";
+@import "quarks/rule";
+@import "quarks/code";
 
 
 /*------ATOMS------*/
 
-	/*code related stuf*/
+	/*heading stuff*/
+	@import "atoms/heading/hgroup__hN";
+
+	/*code stuf*/
 	@import "atoms/code/line-numbers";
 	@import "atoms/code/code-comment";
 
-	/*form related stuf*/
+	/*form stuf*/
 	@import "atoms/form/check-list";
 	@import "atoms/form/form-fields";
 	@import "atoms/form/help-text";
@@ -48,7 +55,7 @@ get to the section that you need.
 	@import "atoms/form/success-failure";
 	@import "atoms/form/text-input";
 
-	/*list related stuf*/
+	/*list stuf*/
 	@import "atoms/list/list__prefix-line";
 
 

@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    $RULE
+\*------------------------------------*/
+
+/**
+ * `hr` elements only take up a few pixels, so we need to give them special
+ * treatment regarding vertical rhythm.
+ */
+
+hr {
+    @include px-rem(margin-bottom, ($base-spacing-unit - 2px));
+}
