@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    $TABLES
+\*------------------------------------*/
+
+table {
+    width:100%;
+}
+th,
+td {
+	@extend %base-table-cell-padding;
+    text-align:left;
+}

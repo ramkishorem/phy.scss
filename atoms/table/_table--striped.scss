@@ -1,0 +1,9 @@
+/*------------------------------------*\
+    $TABLE--STRIPED
+\*------------------------------------*/
+
+%table--striped {
+    tbody tr:nth-of-type(odd) {
+        background-color:#ffc;/* Override this color according to your theme */
+    }
+}

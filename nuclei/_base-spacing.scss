@@ -65,3 +65,18 @@ h4,h5,h6 {
 .landmark {
     @extend %double-bottom-spacing;
 }
+
+
+
+
+
+/**
+ * base table cell padding
+ * keeping this in a class as I had to apply the same values to tr--link object
+ */
+%base-table-cell-padding {
+    padding:$base-spacing-unit / 4;
+    @media screen and (min-width:480px) {
+        padding:$half-spacing-unit;
+    }    
+}

@@ -39,6 +39,8 @@ get to the section that you need.
 @import "quarks/fieldset";
 @import "quarks/rule";
 @import "quarks/code";
+@import "quarks/quotes";
+@import "quarks/tables";
 
 
 /*------ATOMS------*/
@@ -50,6 +52,10 @@ get to the section that you need.
 	@import "atoms/link/link--block";
 	@import "atoms/link/link--inline-block";
 	@import "atoms/link/link--more";
+	@import "atoms/link/link--tr";
+
+	/*paragraph stuff*/
+	@import "atoms/paragraph/lede";
 
 	/*image stuff*/
 	@import "atoms/image/blanket";
@@ -57,6 +63,12 @@ get to the section that you need.
 
 	/*list stuff*/
 	@import "atoms/list/list__prefix-line";
+
+	/*table stuff*/
+	@import "atoms/table/cell-alignments";
+	@import "atoms/table/table--bordered";
+	@import "atoms/table/table--striped";
+	@import "atoms/table/table-col-widths";
 
 	/*form stuf*/
 	@import "atoms/form/check-list";
@@ -67,6 +79,9 @@ get to the section that you need.
 	@import "atoms/form/success-failure";
 	@import "atoms/form/text-input";
 
+	/*quote stuff*/
+	@import "atoms/quote/quote--sourced";
+
 	/*code stuf*/
 	@import "atoms/code/line-numbers";
 	@import "atoms/code/code-comment";
@@ -76,4 +91,3 @@ get to the section that you need.
 
 	/*link stuff*/
 	@import "molecules/link/link--header";
-	@import "molecules/link/link--tr";
