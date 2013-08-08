@@ -1,0 +1,228 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+
+
+/**
+ * 
+ * Inspired by csswizardry.com/beautons
+ * 
+ */
+
+/**
+ * Set the class type to use - normal/silent
+ */
+$btn-silent-classes: false!default;
+
+$btn-class-type:            unquote(".");
+
+@if $btn-silent-classes == true {
+    $btn-class-type:        unquote("%");
+}
+
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Base button styles.
+ *
+ * 1. Allow us to better style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Stop buttons wrapping and looking broken.
+ * 4. Make buttons inherit font styles.
+ * 5. Force all elements using beautons to appear clickable.
+ * 6. Normalise box model styles.
+ * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ *    there is 1em of space above and below that text. We therefore apply 1em
+ *    of space to the left and right, as padding, to keep consistent spacing.
+ * 8. Basic cosmetics for default buttons. Change or override at will.
+ * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ */
+#{$btn-class-type}btn {
+    display:inline-block;       /* [1] */
+    vertical-align:middle;      /* [2] */
+    white-space:nowrap;         /* [3] */
+    font-family:inherit;        /* [4] */
+    font-size:100%;             /* [4] */
+    cursor:pointer;             /* [5] */
+    border:none;                /* [6] */
+    margin:0;                   /* [6] */
+    padding-top:   0;           /* [6] */
+    padding-bottom:0;           /* [6] */
+    line-height:3;              /* [7] */
+    padding-right:1em;          /* [7] */
+    padding-left: 1em;          /* [7] */
+    border-radius:$brand-round; /* [8] */
+}
+
+#{$btn-class-type}btn {
+
+    &,
+    &:hover{
+        text-decoration:none;   /* [9] */
+    }
+
+    &:active,
+    &:focus{
+        outline:none;
+    }
+}
+
+#{$btn-class-type}btn--hover-move {
+    position: relative;
+    &:hover {
+        top: 1px;
+    }
+}
+
+
+
+
+
+/**
+ * Subsections
+ *
+ * SIZE
+ * FONT-SIZE
+ * FUNCTION
+ * STYLE
+ */
+
+
+
+
+ 
+/**
+ * Button SIZE modifiers.
+ *
+ * These all follow the same sizing rules as above; text is 1em, space around it
+ * remains uniform.
+ */
+#{$btn-class-type}btn--small {
+    padding-right:0.5em;
+    padding-left: 0.5em;
+    line-height:2;
+}
+
+#{$btn-class-type}btn--large {
+    padding-right:1.5em;
+    padding-left: 1.5em;
+    line-height:4;
+}
+
+#{$btn-class-type}btn--huge {
+    padding-right:2em;
+    padding-left: 2em;
+    line-height:5;
+}
+
+/**
+ * These buttons will fill the entirety of their container.
+ *
+ * 1. Remove padding so that widths and paddings don’t conflict.
+ */
+#{$btn-class-type}btn--full {
+    width:100%;
+    padding-right:0;            /* [1] */
+    padding-left: 0;            /* [1] */
+    text-align:center;
+}
+
+
+
+
+
+/**
+ * Button FONT-SIZE modifiers.
+ */
+#{$btn-class-type}btn--alpha {
+    font-size:3rem;
+}
+
+#{$btn-class-type}btn--beta {
+    font-size:2rem;
+}
+
+#{$btn-class-type}btn--gamma {
+    font-size:1rem;
+}
+
+/**
+ * Make the button inherit sizing from its parent.
+ */
+#{$btn-class-type}btn--natural {
+    vertical-align:baseline;
+    font-size:inherit;
+    line-height:inherit;
+    padding-right:0.5em;
+    padding-left: 0.5em;
+}
+
+
+
+
+
+/**
+ * Button FUNCTION modifiers.
+ */
+#{$btn-class-type}btn--primary {}
+#{$btn-class-type}btn--secondary {}
+#{$btn-class-type}btn--tertiary {}
+
+/**
+ * Positive actions; e.g. sign in, purchase, submit, etc.
+ */
+#{$btn-class-type}btn--positive{
+    background-color:#4A993E;
+    color:#fff;
+}
+
+#{$btn-class-type}btn--brand {
+    background-color: $brand-color;
+    color:#fff;
+}
+#{$btn-class-type}btn--brand-border {
+    border-color:$brand-color;
+    border-width:3px;
+    border-style:solid;
+    color:$base-font-color;
+}
+/**
+ * Negative actions; e.g. close account, delete photo, remove friend, etc.
+ */
+#{$btn-class-type}btn--negative {
+    background-color:#b33630;
+    color:#fff;
+}
+
+/**
+ * Inactive, disabled buttons.
+ * 
+ * 1. Make the button look like normal text when hovered.
+ */
+#{$btn-class-type}btn--inactive,
+    #{$btn-class-type}btn--inactive:hover,
+    #{$btn-class-type}btn--inactive:active,
+    #{$btn-class-type}btn--inactive:focus {
+        background-color:#ddd;
+        color:#777;
+        cursor:text;            /* [1] */
+    }
+
+
+
+
+
+
+/**
+ * Button STYLE modifiers.
+ *
+ * 1. Use an overly-large number to ensure completely rounded, pill-like ends.
+ */
+#{$btn-class-type}btn--soft {
+    border-radius:200px;        /* [1] */
+}
+
+#{$btn-class-type}btn--hard {
+    border-radius:0;
+}
