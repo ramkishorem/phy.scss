@@ -28,6 +28,7 @@ get to the section that you need.
 @import "nuclei/type-globals";
 @import "nuclei/auto-margin";
 @import "nuclei/borders";
+@import "nuclei/brand";
 
 
 /*------QUARKS------*/
@@ -52,7 +53,6 @@ get to the section that you need.
 	@import "atoms/link/link--block";
 	@import "atoms/link/link--inline-block";
 	@import "atoms/link/link--more";
-	@import "atoms/link/link--tr";
 
 	/*paragraph stuff*/
 	@import "atoms/paragraph/lede";
@@ -90,4 +90,5 @@ get to the section that you need.
 /*------MOLECULES------*/
 
 	/*link stuff*/
+	@import "molecules/link/link--tr";
 	@import "molecules/link/link--header";

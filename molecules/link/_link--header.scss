@@ -5,9 +5,7 @@
 $link-header-padding: $half-spacing-unit/2;
 
 .link--header {
-	text-decoration: none;
-	color: $base-font-color;
-	display: inline-block;
+	@extend .link--inline-block;
 
 	padding: $link-header-padding;
 	/*negative margin to cancel offset created by the padding*/
