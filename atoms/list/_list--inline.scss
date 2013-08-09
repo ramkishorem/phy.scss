@@ -26,7 +26,9 @@ $list--inline-punctuation: ', ';
 $list--inline__prefix-punctuation: ': ';
 
 
-.list--inline, .list--inline > li, .list--inline__prefix {
+.list--inline,
+.list--inline > li,
+.list--inline__prefix {
 	display: inline;
 }
 

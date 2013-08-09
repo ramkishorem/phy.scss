@@ -1,0 +1,62 @@
+/*------------------------------------*\
+	$SPLIT
+\*------------------------------------*/
+/**
+ * Simple split item for creating two elements floated away from one another,
+ * e.g.:
+ *
+   <dl class=split>
+	   <dt class=split__title>Burger and fries</dt>
+	   <dd class=split__data>&pound;5.99</dd>
+	   <dt class=split__title>Fillet steak</dt>
+	   <dd class=split__data>&pound;19.99</dd>
+	   <dt class=split__title>Ice cream</dt>
+	   <dd class=split__data>&pound;2.99</dd>
+   </dl>
+ *
+   <ol class="split  results">
+	   <li class=first><b class=split__title>1st place</b> <span class=split__data>Bob</span></li>
+	   <li class=second><b class=split__title>2nd place</b> <span class=split__data>Lilly</span></li>
+	   <li class=third><b class=split__title>3rd place</b> <span class=split__data>Ted</span></li>
+   </ol>​
+ *
+ * Demo: jsfiddle.net/inuitcss/9gZW7
+ *
+ */
+.split {
+	text-align:left;
+	list-style:none;
+	margin-left:0;
+	@extend .cf;
+}
+	.split__title {
+		width:30%;/*override width in specific places depending on the with of the titles involed*/
+		clear:left;
+		
+	}
+
+	.split__title, .split__data {
+		margin-bottom: $half-spacing-unit;		
+		padding-left: $half-spacing-unit/2;
+		padding-right: $half-spacing-unit/2;
+		float:left;
+	}
+
+	.split__data {
+		font-weight: bold;
+		margin-left:0;
+		width:70%;
+	}
+
+/*
+right align split__title that is inside split--push
+*/
+.split--push {
+	.split__title {
+		text-align:right;
+		width:50%;
+	}
+	.split__data {
+		width:50%;
+	}
+}
