@@ -4,13 +4,15 @@
 /**
  * Create inline blocky lists of content, e.g.:
  *
-	 <ul class=list--inline-block>
-			<li class="li">Foo</li>
-			<li class="li">Bar</li>
-			<li class="li">Baz</li>
-			<li class="li"><a href=# class=list--inline-block__link>Foo Bar Baz</a></li>
-	 </ul>
+	<ul class=list--inline-block>
+		<li class="li">Foo</li><!--
+		--><li class="li">Bar</li><!--
+		--><li class="li">Baz</li><!--
+		--><li class="li"><a class="list--inline-block__link" href=#>Foo Bar Baz</a></li>
+	</ul>
  *
+ * NOTE: NEED TO USE THE COMMENTS AS IN EXAMPLETO AVOID WHITESPACE 
+ * CREATED BY CARRIAGE RETURNS (SPACE CREATED BETWEEN TO 'li'S)
  *
  * Demo: http://codepen.io/affenity/pen/pgnlD
  * 
@@ -29,7 +31,7 @@
 	/*dont go over screen width*/
 	max-width:100%;
 
-	.li {
+	> .li {
 		/*key part*/
 		display:inline-block;
 
