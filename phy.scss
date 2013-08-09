@@ -48,6 +48,7 @@ get to the section that you need.
 @import "atoms/arrows";
 @import "atoms/buttons";
 @import "atoms/breadcrumb";
+@import "atoms/grids";
 
 	/*heading stuff*/
 	@import "atoms/heading/hgroup__hN";
@@ -70,6 +71,7 @@ get to the section that you need.
 	@import "atoms/list/li--arrow";
 	@import "atoms/list/list--block";
 	@import "atoms/list/list--inline";
+	@import "atoms/list/list--inline-block";
 
 	/*table stuff*/
 	@import "atoms/table/cell-alignments";
@@ -99,3 +101,4 @@ get to the section that you need.
 	/*link stuff*/
 	@import "molecules/link/link--tr";
 	@import "molecules/link/link--header";
+	@import "molecules/detile";

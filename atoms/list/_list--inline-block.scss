@@ -1,0 +1,50 @@
+/*------------------------------------*\
+		$LIST--INLINE-BLOCK
+\*------------------------------------*/
+/**
+ * Create inline blocky lists of content, e.g.:
+ *
+	 <ul class=list--inline-block>
+			<li class="li">Foo</li>
+			<li class="li">Bar</li>
+			<li class="li">Baz</li>
+			<li class="li"><a href=# class=list--inline-block__link>Foo Bar Baz</a></li>
+	 </ul>
+ *
+ *
+ * Demo: http://codepen.io/affenity/pen/pgnlD
+ * 
+ * modify to change style to suite your theme. extend in molecule to create different types
+ */
+
+.list--inline-block {
+	/*to cancel the margins and paddings from default ul styling*/
+	margin-left:0;
+	margin-right:0;
+	padding:0;
+
+	/*no bullets*/
+	list-style:none;
+
+	/*dont go over screen width*/
+	max-width:100%;
+
+	.li {
+		/*key part*/
+		display:inline-block;
+
+		/*gutter*/
+		margin:$half-spacing-unit/2;
+
+		/*dont go over screen width*/
+		max-width:100%;
+
+		/* style as per need. 
+		width:200px;
+		border: 1px solid black;*/
+	}
+}
+
+.list--inline-block__link {
+	display:block;
+}

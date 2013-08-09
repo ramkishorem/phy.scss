@@ -21,7 +21,7 @@
 .block-list, .list--block {
 
     &,
-    > li {
+    > li, > .li {
         border:0 solid $base-ui-color;
     }
 }
@@ -30,7 +30,7 @@
     margin-left:0;
     border-top-width:1px;
 
-    > li {
+    > li, > .li {
         border-bottom-width:1px;
         padding:$half-spacing-unit;
     }
