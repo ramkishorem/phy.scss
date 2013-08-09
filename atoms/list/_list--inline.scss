@@ -1,0 +1,49 @@
+/*------------------------------------*\
+	$LIST--BLOCK
+\*------------------------------------*/
+
+/**
+ * Create big blocky lists of content, e.g.:
+ *
+   <h4 class="list--inline__prefix">Tags : </h4>
+   <ul class="list--inline">
+	 <li>HTML</li>
+	 <li>CSS</li>
+	 <li>Sass</li>
+	 <li>JavaScript</li>
+   </ul>
+ *
+ *
+ * Demo: http://codepen.io/affenity/pen/hgdpl
+ *
+ * modify to change style to suite your theme
+ */
+
+$list--inline-punctuation: ', ';
+
+.list--inline, .list--inline > li, .list--inline__prefix {
+	display: inline;
+}
+
+.list--inline {
+	list-style: none;
+	padding: 0;
+
+	> li {
+		&:after {
+			content: $list--inline-punctuation;
+		}
+
+		&:last-child:after {
+			content: '';
+		}
+	}
+}
+
+
+/**
+ * prefix line to precede list
+ */
+.list--inline__prefix {
+	font-weight: normal;/*make prefix normal weight in case it is a heading and bold*/
+}
