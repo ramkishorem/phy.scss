@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    $RESPONSIVE-NAV
+\*------------------------------------*/
+
+#nav-toggle {
+	@include media-query($site-nav-fold-breakpoint) {
+		display: none;
+	}
+	
+	/* style as per the theme */
+	@extend #{$btn-class-type}btn;
+	@extend #{$btn-class-type}btn--small;
+	@extend #{$btn-class-type}btn--brand-border;
+	position: absolute;
+	right:$base-spacing-unit;
+	top:30px;
+}

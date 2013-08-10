@@ -54,6 +54,7 @@ get to the section that you need.
 @import "atoms/media";
 @import "atoms/split";
 @import "atoms/visuallyhidden";
+@import "atoms/rules";
 
 	/*heading stuff*/
 	@import "atoms/heading/hgroup__hN";
@@ -102,8 +103,13 @@ get to the section that you need.
 
 
 /*------MOLECULES------*/
+@import "molecules/detile";
 
 	/*link stuff*/
 	@import "molecules/link/link--tr";
 	@import "molecules/link/link--header";
-	@import "molecules/detile";
+
+	/*js-plugins*/
+	@import "molecules/js-plugins/responsive-nav";
+	@import "molecules/js-plugins/tablesorter";
+	
