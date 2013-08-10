@@ -6,16 +6,31 @@ The skeleton focuses on providing a design pattern rather than actual designs. I
 
 Any developer who understands the need for abstraction and OO approach can pick this as a starting point to make their own skeleton.
 
-There won't be a separate document for phy.scss. But I consider the code to be my document. All the modules are commented heavily either by me or by people from whom I forked few modules.
-
 ## Installation
 
 **Requires Sass >=3.2**
 
-Installation is pretty simple. Download a zip of the project and extract into a folder, say sass, alongside your css folder. This is not a necessity. But the watch files provided with the framework assume this structure. If you put the sass elsewhere, modify the watch file, accordingly. Watch files for both windows cmd prompt and unix terminal are included.
+Installation is pretty simple. Download a zip of the project and extract into a folder, say sass, alongside your css folder. 
+
+    your-project-folder/
+        css/
+        	style.min.css
+        sass/
+        	nuclie/
+        	properties/
+        	quarks/
+            atoms/
+            molecules/
+            phy.scss
+            watch
+        index.html
+        
+This is not a necessity. But the watch files provided with the framework assume this structure. If you put the sass elsewhere, modify the watch file, accordingly. Watch files for both windows cmd prompt and unix terminal are included.
 
 
 ## Document
+
+There won't be a separate document for phy.scss. But I consider the code to be my document. All the modules are commented heavily either by me or by people from whom I forked few modules.
 
 Treat the phy.scss file as a list of contents. That file imports all the modules and brings everything together. If I don't need any of the modules in the skeleton for a particular project, I simply comment it out. In fact, I usually start with commenting all the atoms and molecules. Some of the bigger modules depend on objects in the smaller ones. But you can figure out any missing modules when sass throws related errors.
 
