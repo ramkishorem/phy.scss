@@ -17,7 +17,7 @@ Installation is pretty simple. Download a zip of the project and extract into a 
 
 ## Document
 
-Treat the phy.scss file as a list of contents. That is where all the modules are imported. If I don't need any of the modules in the skeleton for a particular project. I simply comment it out. In fact, I usually start with commenting all the atoms and molecules. Some of the bigger modules depend on objects in the smaller ones. But you can figure out any missing modules when sass throws related errors.
+Treat the phy.scss file as a list of contents. That file imports all the modules and brings everything together. If I don't need any of the modules in the skeleton for a particular project, I simply comment it out. In fact, I usually start with commenting all the atoms and molecules. Some of the bigger modules depend on objects in the smaller ones. But you can figure out any missing modules when sass throws related errors.
 
 
 ## Inpired by
