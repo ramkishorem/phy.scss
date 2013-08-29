@@ -1,10 +1,18 @@
 # phy.scss - A Sass Framework/Skeleton
 
-phy.scss is a Sass (scss syntax) based, Object Oriented Framework built with objects and abstractions that I usually use for my websites. 
+phy.scss is a Sass (scss syntax) based, Object Oriented Framework(more like a Skeleton) built with objects and abstractions that I usually use for my websites.
 
-The skeleton focuses on providing a design pattern rather than actual designs. I built it as a way to get started with styling quickly but still with a clean slate for every webstie. Sticking to this folder/module structure also helps with keeping the css clean and easily maintainable.
+## OOCSS
 
-Any developer who understands the need for abstraction and OO approach can pick this as a starting point to make their own skeleton.
+phy.scss is an object-oriented(OO) skeleton that focuses on providing design patterns and abstractions rather than actual designs. OOCSS promotes DRYness, reuse, portability and lends itself well to scalability, which makes writing css for projects of any size a lot easier.
+
+## Who is it for?
+
+Any developer/designer who understands the need for abstraction and OO approach can pick this as a starting point to make their own skeleton.
+
+## What should I know?
+
+A good css knowledge is needed, obviously. On top of that, a basic understanding of oops is needed to grasp the code structure that is involved and has to be maintained.
 
 ## Installation
 
