@@ -1,7 +1,14 @@
 /*------------------------------------*\
     PROPERTIES - $UI
 \*------------------------------------*/
+
 /**
  * Default colour for objects’ borders etc.
  */
-$base-ui-color:      #ddd!default;
+ 
+$base-ui-color:      #999;
+/**
+ * content panels' background color
+ */
+
+$base-bg-color:      $brand-color-complement;

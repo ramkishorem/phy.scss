@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    $SITE-WRAPPER
+\*------------------------------------*/
+
+$margin-scale:3%;
+.site-wrap {
+    max-width: 68em;
+    @include grid-media-query('wide') {
+        max-width: 75em;
+    }
+    @extend %auto-margin;
+}
+
+.dashboard-wrap {
+    max-width:120em;
+    @extend %auto-margin;
+    padding-left:$half-spacing-unit;
+    padding-right:$half-spacing-unit;
+}

@@ -8,5 +8,10 @@
  */
 
 hr {
-    @include px-rem(margin-bottom, ($base-spacing-unit - 2px));
+    //@include px-rem(margin-bottom, ($base-spacing-unit - 2px));
+    @extend %rule;
+}
+
+.rule {
+    @extend %rule;
 }

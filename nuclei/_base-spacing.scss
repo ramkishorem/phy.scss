@@ -37,8 +37,8 @@
  * Setting the bottom margin for some Base elements and classes 
  * to keep the consistency
  */
-h1,h2,h3,hgroup,
-ul,ol,dl,
+section, article, hgroup,
+ul,ol,
 blockquote,p,address,
 table,
 fieldset,figure,
@@ -48,16 +48,22 @@ pre,
  */
 .island,
 .islet {
-    @extend %base-bottom-spacing;
+    @extend %half-bottom-spacing;
+
 
     .islet & {
-    	@extend %half-bottom-spacing;
+        @extend %half-bottom-spacing;
     }
+    
+    // &:last-child {
+    //     margin-bottom:0;
+    // }
 }
 
-h4,h5,h6 {
+h1,h2,h3,h4,h5,h6 {
     @extend %half-bottom-spacing;
 }
+
 
 /**
  * Doubled up `margin-bottom` helper class.
@@ -76,7 +82,4 @@ h4,h5,h6 {
  */
 %base-table-cell-padding {
     padding:$base-spacing-unit / 4;
-    @media screen and (min-width:480px) {
-        padding:$half-spacing-unit;
-    }    
 }

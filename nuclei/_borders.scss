@@ -6,17 +6,17 @@
  * full border
  */
  
-.full-border {
-	border: 2px solid $base-ui-color;
+%full-border {
+	border: 1px solid $base-ui-color;
 }
 
-.round {
+%round {
 	-webkit-border-radius: $brand-round;
 	   -moz-border-radius: $brand-round;
 	        border-radius: $brand-round;
 }
 
-.full-border--round {
-	@extend .full-border;
-	@extend .round;
+%full-border--round {
+	@extend %full-border;
+	@extend %round;
 }

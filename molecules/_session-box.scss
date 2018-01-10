@@ -1,0 +1,66 @@
+/*------------------------------------*\
+    $SESSION-BOX
+\*------------------------------------*/
+
+.session-box__div {
+    text-align: right;
+    margin:$half-spacing-unit/2 3%;
+    @include font-size(14px);
+    input {
+        padding:1px!important;
+        border:0;
+        border-bottom:1px solid $brand-color-complement;
+        background:rgba(0,0,0,0);
+        color:$brand-color-complement;
+        &::-webkit-input-placeholder {
+           color: rgba(255,255,255,0.6);
+           font-style:italic;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+           color: rgba(255,255,255,0.6);
+           font-style:italic;  
+        }
+
+        &::-moz-placeholder {  /* Firefox 19+ */
+           color: rgba(255,255,255,0.6);
+           font-style:italic;  
+        }
+
+        &:-ms-input-placeholder {  
+           color: rgba(255,255,255,0.6);
+           font-style:italic;  
+        }        
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        /* Change the color to your own background color */
+        -webkit-box-shadow:0 0 0 50px $brand-color-2 inset;
+        -webkit-text-fill-color: $brand-color-complement;
+    }
+    input:hover,
+    input:focus,
+    input:active {
+        box-shadow:none;
+    }
+    button {
+        margin:0px;
+        background:rgba(0,0,0,0);
+        border:0;
+        color:$brand-color;
+        &:hover {
+            color:$brand-color-complement;
+        }
+    }
+    a,button {
+        padding:6px;
+        display:inline-block;
+    }
+    .login-buttons__container {
+        @include grid-media-query('lap') {
+            display:inline-block;
+        }
+    }
+}

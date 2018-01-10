@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    $NO-IMAGE-AVAILABLE
+\*------------------------------------*/
+
+.no-image-available {
+    display: inline-block;
+    max-width: 150px;
+    min-width:140px;
+    min-height:120px;
+    padding: $half-spacing-unit;
+    &:after {
+        content: 'No photo available';
+        @include font-size(18px);
+        vertical-align: middle;
+    }
+    text-align: center;
+    background: url(#{$static-url}images/photo-placeholder.jpg) no-repeat center center;
+    &.image-holder {
+        &:after {
+            content: '';
+        }
+    }
+}

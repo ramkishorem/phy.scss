@@ -27,6 +27,46 @@ img[height] {
 /**
  * Images in `figure` elements.
  */
-figure > img {
-    display:block;
+figure img {
+    @extend %auto-margin;
 }
+
+figure {
+    // background: $brand-color-2;
+	text-align: center;
+	display:block;
+}
+
+
+/**
+ * wordpress requirements
+ */
+
+// .site-main img {
+//     margin: 0;
+//     height: auto;
+//     width: auto;
+// }
+.site-main .alignleft,
+.site-main img.alignleft {
+    float: left;
+    margin: 4px 4% 4px 0;
+}
+.site-main .alignright,
+.site-main img.alignright {
+    float: right;
+    margin: 4px 0 4px 4%;
+}
+.site-main .aligncenter,
+.site-main img.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.site-main img.alignleft,
+.site-main img.alignright,
+.site-main img.aligncenter {
+    margin-bottom: 12px;
+}
+

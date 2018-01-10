@@ -19,8 +19,11 @@
  */
 
 .spoken-form {
-	label, .label {
+	p, label, .label {
     	display:inline-block;
     	font:inherit;
 	}
+  p {
+    margin-left:$base-spacing-unit;
+  }
 }

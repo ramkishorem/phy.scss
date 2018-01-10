@@ -1,0 +1,71 @@
+/*------------------------------------*\
+    $MODAL
+\*------------------------------------*/
+
+/**
+ * Styling for modal dialog boxes.
+ * Usually used for a js script that spawns a custom dialog
+ */
+
+.modal {
+    background: $base-bg-color;
+    padding:2%;
+
+    position:fixed;
+    z-index:99;
+
+    top:3em;
+    max-width:96%;
+    @include grid-media-query('desk') {
+        padding:$half-spacing-unit;
+        top:10%;
+        max-width:50%;
+        margin-left:-25%;
+    }
+    @include grid-media-query('wide') {
+        max-width:30%;
+        margin-left:-15%;
+    }
+
+    /* Hidden */
+    // @include opacity(0);
+    // pointer-events: none;
+    left:-100%;
+    @include vendor(transition, left 600ms ease);
+    .btn--submit {
+        margin:0 $half-spacing-unit;
+    }
+    .img {
+        display:block;
+    }
+}
+
+.modal__overlay {
+    content:'.';
+    color:rgba(0,0,0,0);
+    z-index:98;
+    background:rgba(0,0,0,0.7);
+    position:fixed;
+    top:0;
+    left:0;
+    width:0;
+    height:100%;
+    @include vendor(transition, width 600ms ease);
+}
+
+.modalIsOpen {
+    .modal__overlay {
+        width:100%;        
+    }
+    .modal {
+        @include opacity(1);
+        pointer-events: auto;
+        left:2%;
+        @include grid-media-query('desk') {
+            left:50%;
+        }
+        @include grid-media-query('wide') {
+            left:50%;
+        }
+    }
+}

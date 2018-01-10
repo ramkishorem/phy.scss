@@ -22,8 +22,8 @@
 /**
  * customize punctuations used
  */ 
-$list--inline-punctuation: ', ';
-$list--inline__prefix-punctuation: ': ';
+$list--inline-punctuation:', ';
+$list--inline__prefix-punctuation: '';
 
 
 .list--inline,
@@ -35,10 +35,14 @@ $list--inline__prefix-punctuation: ': ';
 .list--inline {
 	list-style: none;
 	padding: 0;
+	/**
+	 * reset left margin set on base list elements
+	 */
+	margin-left:0;
 
 	> li {
 		&:after {
-			content: $list--inline-punctuation;
+			content:$list--inline-punctuation;
 		}
 
 		&:last-child:after {

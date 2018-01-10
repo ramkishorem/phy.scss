@@ -4,8 +4,9 @@
 /**
  * Base font stuff
  */
-$base-font-family:    "Open Sans", sans-serif!default;
+ 
+// $base-font-family:    $brand-face;
 $base-monospace-face: Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace!default;
 
-$base-font-color:     #222!default;
-$low-key-font-color:  #999!default;
+$base-font-color:     #333;
+$low-key-font-color:  lighten($base-font-color,30%);

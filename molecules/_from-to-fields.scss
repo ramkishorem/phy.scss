@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    $FROM-TO-FIELDS
+\*------------------------------------*/
+// 2 fields for 1 field
+
+.from-to {
+    .from-to__field {
+        width:40%;
+        display: inline-block;
+        padding:3px;
+        text-align: center;
+        input,select {
+            width:100%!important;
+        }
+    }
+    .from-to__to {
+        width:20%;
+        display: inline-block;
+        padding:3px;
+        text-align: center;
+    }
+}
+
+.feet-inch {
+    .feet-inch__field {
+        width:50%;
+        display: inline-block;
+        padding:3px;
+        text-align: center;
+        input,select {
+            width:47%;
+        }
+        input[type=checkbox] {
+            width:20%;
+        }
+    }
+    input[type=number] {
+        width:40%!important;
+    }
+}

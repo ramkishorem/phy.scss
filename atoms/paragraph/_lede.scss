@@ -9,5 +9,19 @@
 
 .lede,
 .lead {
-    @include font-size($base-font-size * 1.125);
+    // text-shadow: 0px 0px 5px #fff;
+    @include font-size($base-font-size * 1.2, $line-height:false);
+    @include grid-media-query('desk') {
+        @include font-size($base-font-size * 1.4, $line-height:false);
+        font-weight:700;
+    }
+}
+
+.lede__wrapper {
+    position: relative;
+    .lede {
+        @include grid-media-query('wide') {
+            padding-top:5%;
+        }
+    }
 }

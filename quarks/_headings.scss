@@ -1,5 +1,5 @@
 /*------------------------------------*\
-	$HEADINGS
+    $HEADINGS
 \*------------------------------------*/
 /**
  * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
@@ -9,20 +9,36 @@
  * heading hierarchy.
  */
 h1 {
-	@extend .alpha;
+    @extend .alpha;
 }
 h2 {
-	@extend .beta;
+    @extend .beta;
 }
 h3 {
-	@extend .gamma;
+    @extend .gamma;
 }
 h4 {
-	@extend .delta;
+    @extend .delta;
 }
 h5 {
-	@extend .epsilon;
+    @extend .epsilon;
 }
 h6 {
-	@extend .zeta;
+    @extend .zeta;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight:700;
+    &.area-heading {
+        text-align: center;
+    }
+    text-transform: uppercase;
+}
+
+hgroup {
+    text-align: center;
+}
+
+strong {
+    font-weight:700;
 }

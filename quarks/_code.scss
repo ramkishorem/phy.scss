@@ -17,3 +17,15 @@ samp {
         border-bottom:1px solid;
         color:inherit;
     }
+
+
+/**
+ * base code styling. modify for the theme
+ */
+pre {
+	background-color:#333;
+	color:$base-bg-color;
+	border-radius:$brand-round;
+	padding:$half-spacing-unit;
+	overflow:auto;
+}

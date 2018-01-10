@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    $SITE-NAV
+\*------------------------------------*/
+
+.nav--page-menu, .nav--app-menu {
+    list-style:none;
+    margin-left:0;
+    > li > a {
+        @extend .btn--submit;
+    }   
+}
+.nav--page-menu {
+    > li {
+        display:inline-block;
+        margin-right:$half-spacing-unit;
+        > a {
+            @extend %btn--small;
+        }
+    }
+}
+
+.nav--app-menu {
+    > li {
+        margin-bottom:$half-spacing-unit;
+        text-align: center;
+        > a {
+            width:40%;
+            min-width:12em;
+        }
+    }
+}

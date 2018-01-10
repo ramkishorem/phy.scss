@@ -15,11 +15,8 @@
  *
  */
 
-/*small*/.extra-help, .help-text {
-    display:inline-block;
-    visibility:hidden;
-    .text-input:active + &,
-    .text-input:focus + & {
-    	visibility:visible;
-    }
+/*small*/.extra-help, .help-text, .helptext {
+    display:block;
+    color:#aaa;
+    @include font-size(14px);
 }

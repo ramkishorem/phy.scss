@@ -6,9 +6,10 @@
 	display: block;
 	width: 100%;
 	text-decoration: none;
-	&:hover {
-		/**
-		 * style hover effects according to project theme
-		 */
+	//color:$base-font-color!important;
+	&:hover, &:hover, &:active {
+		//background:$brand-color;
+		text-decoration: none;
+		//color:$base-bg-color!important;
 	}
 }

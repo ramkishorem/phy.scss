@@ -5,5 +5,19 @@
 .link--inline-block {
 	display: inline-block;
 	text-decoration: none;
-	color: $base-font-color;
+	//color: $base-font-color;
+}
+
+/**
+ * hover effect helper class
+ * Used separately as per need
+ */
+.link--inline-block-hover-effect {
+	&:hover, &:focus, &:active {
+		@include opacity(0.8)
+	}
+
+	.csstransitions & {
+		@include vendor(transition, opacity 200ms ease-in-out);
+	}
 }

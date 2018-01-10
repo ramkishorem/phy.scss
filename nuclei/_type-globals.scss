@@ -9,23 +9,32 @@
 .alpha {
     @include font-size($h1-size);
 }
+
 .beta {
     @include font-size($h2-size);
 }
+
 .gamma {
     @include font-size($h3-size);
+    color: $brand-color;
 }
 .delta {
     @include font-size($h4-size);
 }
 .epsilon {
+    color: $brand-color;
     @include font-size($h5-size);
 }
 .zeta {
     @include font-size($h6-size);
 }
 
-
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
 
 
 
@@ -67,4 +76,15 @@
  */
 %base-monospace-face {
     font-family:$base-monospace-face;
+}
+
+
+
+
+
+/**
+ * font with low key color as in "posted time"
+ */
+%low-key {
+    color: $low-key-font-color;
 }

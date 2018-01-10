@@ -1,0 +1,13 @@
+/*------------------------------------*\
+		$BIG-ERROR
+\*------------------------------------*/
+
+.big-error {
+	@include font-size($base-font-size * 1.5);
+	text-align: center;
+	padding: 20% 5%;
+	@include grid-media-query('desk') {
+		@include font-size($base-font-size * 2.5);
+		padding: 23% 3%;
+	}
+}

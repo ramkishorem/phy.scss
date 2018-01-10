@@ -1,34 +1,83 @@
 /*------------------------------------*\
-    $FORM-FIELDS
+        $FORM-FIELDS
 \*------------------------------------*/
 
 /**
  * Group sets of form fields in a list, e.g.:
  *
-   <ul class=form-fields>
-       <li>
-           <label />
-           <input />
-       </li>
-       <li>
-           <label />
-           <select />
-       </li>
-       <li>
-           <label />
-           <input />
-       </li>
-   </ul>
+     <ul class=form-fields>
+             <li>
+                     <label />
+                     <input />
+             </li>
+             <li>
+                     <label />
+                     <select />
+             </li>
+             <li>
+                     <label />
+                     <input />
+             </li>
+     </ul>
  *
  */
 
 .form-fields {
-    list-style:none;
-    margin:0;
+    list-style: none;
+    margin: 0;
+
+    > li {
+        @extend %half-bottom-spacing;
+    }
+
+    > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .text-input {
+        width: 100%;
+    }
+
+    .errorlist {
+        margin-bottom:$half-spacing-unit;
+    }
+
+    @include grid-media-query('lap') {
+        label {
+            display: inline-block;
+            width: 28%;
+        }
+
+        .text-input {
+            width: 68%;
+            display:inline-block;
+        }
+
+        .helptext, .help-text {
+            margin-left:28%;
+        }
+    }
+
 }
-    .form-fields > li {
-        @extend %sass-margin-bottom;
+
+    .form-fields--half {
+        > li {
+            @include grid-media-query('desk') {
+            width:48%;
+            display:inline-block;
+                &:nth-child(2n+1) {
+                    padding-right:$base-spacing-unit;
+                }
+                &:nth-child(2n) {
+                    padding-left:$base-spacing-unit;
+                }
+            }
+        }
     }
-    .form-fields > li:last-child {
-        margin-bottom:0;
-    }
+
+input[type=checkbox] {
+    width:$base-spacing-unit;
+    height:$base-spacing-unit;
+    position:relative;
+    top:6px;
+}

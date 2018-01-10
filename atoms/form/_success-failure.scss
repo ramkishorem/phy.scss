@@ -8,4 +8,31 @@
 
 .success {
   color:$success-color;
+  font-weight:700;
+}
+
+.message.error,
+.message.success {
+    text-align: center;
+}
+
+.messages {
+    list-style:none;
+    border: solid $base-ui-color;
+    border-radius:$brand-round;
+    padding:$half-spacing-unit;
+    margin-left:0;
+}
+
+.success-border {
+  border:2px solid $success-color;
+}
+
+.error-border {
+  border:2px solid $error-color;
+}
+
+.warning {
+  background:$error-color;
+  color:#fff;
 }

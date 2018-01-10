@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    $CONTENT-BOX
+\*------------------------------------*/
+
+.content-box {
+    margin-bottom:$half-spacing-unit;
+    
+    .content-grid &:last-child {
+        margin-bottom:0;
+    }
+}
+
+.colored-content-box {
+    padding:$half-spacing-unit $margin-scale;
+    
+    .colored-content-box__img__container {
+        img {
+            max-width:30%;
+        }
+        text-align: center;
+        margin-bottom:$base-spacing-unit;
+    }
+    &.brand-bg-color {
+        background: $brand-color;
+        z-index:1;
+        color: $brand-color-complement;
+    }
+}

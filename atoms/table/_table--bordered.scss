@@ -2,22 +2,24 @@
     $TABLE--BORDERED
 \*------------------------------------*/
 
-%table--bordered {
+.table--bordered {
 
     th,
     td {
-        border:1px solid $base-ui-color;
+        border:1px solid $brand-color;
 
         &:empty {
             border:none;
         }
     }
+}
 
-    thead tr:last-child th {
-        border-bottom-width:2px;
-    }
+.tr--highlight {
+    background:skyblue;
+    font-weight:bold;
+}
 
-    tbody tr th:last-of-type {
-        border-right-width:2px;
-    }
+.tr--highlight--alternate {
+    background:orange;
+    font-weight:bold;
 }

@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    $SITE-MAIN
+\*------------------------------------*/
+
+
+.site-main {
+    position: relative;
+    padding-left:$margin-scale;
+    padding-right:$margin-scale;
+    @include grid-media-query('wide') {
+        padding:0;
+    }
+    min-height:100%;
+}
+
+.big-padding-on-pc {
+    padding:15%;
+}

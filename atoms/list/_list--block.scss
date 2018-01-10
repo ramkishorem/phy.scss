@@ -21,17 +21,17 @@
 .block-list, .list--block {
 
     &,
-    > .li {
-        border:0 solid $base-ui-color;
+    > li, .list--block__li {
+        border:0 solid $brand-color-2;
     }
 }
 .block-list, .list--block {
     list-style:none;
     margin-left:0;
-    border-top-width:1px;
+    border-bottom: 1px solid $brand-color-2;
 
-    > .li {
-        border-bottom-width:1px;
+    > li, .list--block__li {
+        border-top-width:1px;
         padding:$half-spacing-unit;
     }
 }

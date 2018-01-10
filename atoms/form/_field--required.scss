@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    $FIELD--REQUIRED
+\*------------------------------------*/
+
+/**
+ * To add some style to required fields and create distinction
+ * eg:
+ 		<li class="field--required">
+			<label for = "id_name">Name</label><!--
+			--><input class="text-input" id="id_name" type="text" name="name" maxlength="30" />
+		</li>
+ *
+ */
+ 
+.field--required > label, label.field--required {
+    &:before {
+        content: '*';
+        color:red;
+    }
+}

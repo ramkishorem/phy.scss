@@ -11,7 +11,7 @@
  * more-link for backwards compatibility with my previous habit
  */
 .more-link {
-	&:before {
-		content:"...";
+	&:after {
+		content:' \2192';
 	}
 }

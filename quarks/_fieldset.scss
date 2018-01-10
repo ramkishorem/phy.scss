@@ -3,5 +3,9 @@
 \*------------------------------------*/
 
 fieldset {
-    padding:$base-spacing-unit;
+    background:#f1f1f1;
+    legend {
+        @extend .gamma;
+        font-weight:bold;
+    }
 }

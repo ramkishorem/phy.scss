@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    $LINK--HEADING
+\------------------------------------*/
+
+.link--heading {
+	display: block;
+	padding-left: 3px;
+	padding-right: 3px;
+
+	/**
+	 * design for theme
+	 */
+	color: $base-font-color;
+	&:hover {
+		color: $brand-color;
+		text-decoration: none;
+	}
+}

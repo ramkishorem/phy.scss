@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    $CONTENT-WRAP
+\*------------------------------------*/
+
+.content-grid {
+    @extend %grid;
+}
+
+.content-grid__major, .content-grid__minor, .content-grid__half,
+.content-grid--small__half {
+    @extend %grid__item;
+    @extend %one-whole;
+    padding:$half-spacing-unit;
+    margin-bottom:$half-spacing-unit;
+    // .list--block & {
+    //     margin-bottom:0;
+    //     padding:0 $half-spacing-unit;
+    // }
+}
+
+.content-grid__major {
+    @extend %desk--two-thirds;
+}
+
+.content-grid__minor {
+    @extend %desk--one-third;
+}
+
+.content-grid__half {
+    @extend %wide--one-half;
+}
+
+.content-grid--small__half {
+    @extend %desk--one-half;
+    @extend %sass-margin-bottom;
+    // padding-top:3px;
+    // padding-bottom:3px;
+}

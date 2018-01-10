@@ -2,12 +2,6 @@
     PROPERTIES - $LINKS
 \*------------------------------------*/
 
-$link-color:         #4F92C4!default;
+$link-color:         $brand-color-2;
 
-/**
- * more link color variables when needed
- *
-	$visited-link-color: #6938A8!default;
-	$active-link-color:  #4F92C4!default;
- *
- */
+$active-link-color:  $brand-color;

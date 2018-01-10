@@ -17,16 +17,36 @@ blockquote, .quote--sourced {
     /**
      * .4em is roughly equal to the width of the opening “ that we wish to hang.
      */
-    text-indent:-0.41em;
+    // text-indent:-0.41em;
+    text-align: left;
+    p {
+      font-style: italic;
+    }
 
     p:last-of-type {
         margin-bottom:0;
+    }
+
+    p:first-child {
+      position:relative;
+      padding-left: $base-spacing-unit*1.3;
+
+      &:before{
+        position: absolute;
+        content:"\201C";
+        left:0;
+        top: -$base-spacing-unit;
+        @include font-size(64px);
+        color: $brand-color-2;
+        font-style: normal;
+      }
     }
 }
 
 .quote--sourced__source {
     display:block;
     text-indent:0;
+    text-align: right;
 
     &:before{
         content:"\2014";

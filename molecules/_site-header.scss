@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    $SITE-HEADER
+\*------------------------------------*/
+
+.site-header {
+    background-color:$brand-color-2;
+}
+
+.logo, .site-nav-session {
+    @extend %grid__item;
+    @extend %one-whole;
+    a {
+        color:inherit;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.logo {
+    @extend %desk--one-quarter;
+}
+
+.site-nav-session {
+    @extend %desk--three-quarters;
+    color:$brand-color-complement;
+}
+
+.nav-wrap__container {
+    @include grid-media-query('site-nav-desk') {
+        background-color:$brand-color;
+    }
+}
+
+@media print { 
+ /* All your print styles go here */
+    .site-header, .hide-for-print { display: none !important; } 
+}

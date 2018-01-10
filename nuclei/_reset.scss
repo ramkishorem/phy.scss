@@ -1,85 +1,56 @@
-/*------------------------------------*\
-    $RESET
-\*------------------------------------*/
-/**
- * A more considered reset; more of a restart...
- * As per: csswizardry.com/2011/10/reset-restarted
- */
-
-@if $global-border-box == true{
-    /**
-    * Let’s make the box model all nice, shall we...?
-    */
-    *{
-        &,
-        &:before,
-        &:after{
-            @include vendor(box-sizing, border-box);
-        }
-    }
-}
+/* ==========================================================================
+   #RESET
+   ========================================================================== */
 
 /**
- * The usual...
+ * A very simple reset that sits on top of Normalize.css.
  */
-h1,h2,h3,h4,h5,h6,
-p,blockquote,pre,
-dl,dd,ol,ul,
-form,fieldset,legend,
-table,th,td,caption,
-hr{
-    margin:0;
-    padding:0;
+
+body,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+  margin:  0;
+  padding: 0;
 }
+
+
 
 /**
- * Give a help cursor to elements that give extra info on `:hover`.
+ * Remove trailing margins from nested lists.
  */
-abbr[title],dfn[title]{
-    cursor:help;
+
+li > {
+
+  ol,
+  ul {
+    margin-bottom: 0;
+  }
+
 }
+
+
 
 /**
- * Remove underlines from potentially troublesome elements.
+ * Remove default table spacing.
  */
-u,ins{
-    text-decoration:none;
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
+
+
 
 /**
- * Apply faux underline via `border-bottom`.
+ * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+ *    on fieldsets.
  */
-ins{
-    border-bottom:1px solid;
-}
 
-/**
- * So that `alt` text is visually offset if images don’t load.
- */
-img{
-    font-style:italic;
-}
-
-/**
- * Give form elements some cursor interactions...
- */
-label,
-input,
-textarea,
-button,
-select,
-option{
-    cursor:pointer;
-}
-    .text-input:active,
-    .text-input:focus,
-    textarea:active,
-    textarea:focus{
-        cursor:text;
-        outline:none;
-    }
-
-
-pre{
-    overflow:auto;
+fieldset {
+  min-width: 0; /* [1] */
+  border: 0;
 }

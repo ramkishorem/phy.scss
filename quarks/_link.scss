@@ -5,8 +5,24 @@
 a {	
 	color:$link-color;
 	text-decoration: none;
+    &:hover {
+        color:$active-link-color;
+    }
+    .csstransitions & {
+        @include vendor(transition, all 200ms linear);
+    }
+    &.disabled {
+        pointer-events: none;
+        color:grey;
+    }
+}
 
-	&:hover, &:focus, &:active {
-		text-decoration: underline;
-	}
+.link--underline {
+    border-bottom:1px dotted $brand-color-2;
+}
+
+.link--bordered {
+    border:1px dotted blue;
+    padding-left:2px;
+    padding-right:2px;
 }

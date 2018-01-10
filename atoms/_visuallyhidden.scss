@@ -20,6 +20,16 @@
 }
 
 .accessibility,
-.visuallyhidden {
+.visuallyhidden,
+.hidden {
     @include accessibility;
+}
+
+.js .js-hide {
+    @include accessibility;
+}
+
+.slide-up {
+    max-height:0!important;
+    overflow:hidden!important;
 }

@@ -10,6 +10,6 @@
 */
 
 @mixin opacity($opacity: 1) {
-opacity: $opacity;
-filter: alpha(opacity=$opacity*100);
+	opacity: $opacity;
+	filter: alpha(opacity=$opacity*100);
 }

@@ -1,0 +1,26 @@
+/* ### ### ### 11 */
+.btn--submit {
+    @extend %btn;
+    background:$brand-color;
+    color:$base-bg-color;
+    line-height:2;
+    &:hover, &:focus {
+        background:$link-color;
+        color:$base-bg-color;
+    }
+}
+
+.btn--submit__container {
+    text-align: center;
+    .btn--submit {
+        margin:0 $half-spacing-unit;
+    }
+}
+
+// .btn--green {
+//     background:green;
+// }
+
+// .btn--red {
+//     background:red;
+// }

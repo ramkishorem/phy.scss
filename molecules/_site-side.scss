@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    $SITE-SIDE
+\*------------------------------------*/
+
+
+.site-side {
+    @extend .colored-content-box;
+    background:#EBEBEB;
+    margin-bottom:$base-spacing-unit;
+}

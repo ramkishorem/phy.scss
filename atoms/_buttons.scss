@@ -12,12 +12,12 @@
 /**
  * Set the class type to use - normal/silent
  */
-$btn-silent-classes: false!default;
+$btn-silent-classes: true;
 
 $btn-class-type:            unquote(".");
 
 @if $btn-silent-classes == true {
-    $btn-class-type:        unquote("%");
+    $btn-class-type:        unquote("%") !global;
 }
 
 /*------------------------------------*\
@@ -41,17 +41,13 @@ $btn-class-type:            unquote(".");
 #{$btn-class-type}btn {
     display:inline-block;       /* [1] */
     vertical-align:middle;      /* [2] */
-    white-space:nowrap;         /* [3] */
+    // white-space:nowrap;         /* [3] */
     font-family:inherit;        /* [4] */
     font-size:100%;             /* [4] */
     cursor:pointer;             /* [5] */
     border:none;                /* [6] */
     margin:0;                   /* [6] */
-    padding-top:   0;           /* [6] */
-    padding-bottom:0;           /* [6] */
-    line-height:3;              /* [7] */
-    padding-right:1em;          /* [7] */
-    padding-left: 1em;          /* [7] */
+    padding:0.2em 1em;          /* [7] */
     border-radius:$brand-round; /* [8] */
 }
 
@@ -99,21 +95,19 @@ $btn-class-type:            unquote(".");
  * remains uniform.
  */
 #{$btn-class-type}btn--small {
-    padding-right:0.5em;
-    padding-left: 0.5em;
-    line-height:2;
+    padding:0.7em;
+}
+
+#{$btn-class-type}btn--medium {
+    padding:1em;
 }
 
 #{$btn-class-type}btn--large {
-    padding-right:1.5em;
-    padding-left: 1.5em;
-    line-height:4;
+    padding:1.25em;
 }
 
 #{$btn-class-type}btn--huge {
-    padding-right:2em;
-    padding-left: 2em;
-    line-height:5;
+    padding:1.5em;
 }
 
 /**
@@ -178,15 +172,29 @@ $btn-class-type:            unquote(".");
 }
 
 #{$btn-class-type}btn--brand {
-    background-color: $brand-color;
-    color:#fff;
+    border-left:3px solid $brand-color;
+    border-right:3px solid $brand-color;
+    background:rgba(0,0,0,0);
+    color:brand-color;
+    .csstransitions & {
+        @include vendor(transition, 300ms all ease);
+    }
+    &:hover, &:focus, &:active {
+        border-color:$brand-color-2;
+        color:$brand-color-2;
+    }
 }
-#{$btn-class-type}btn--brand-border {
-    border-color:$brand-color;
-    border-width:3px;
-    border-style:solid;
-    color:$base-font-color;
+
+#{$btn-class-type}btn--white {
+    border-color:$base-bg-color;        
+    color:$base-bg-color;        
 }
+
+// .btn--submit {
+//     @extend %btn;
+//     @extend %btn--brand;
+// }
+    
 /**
  * Negative actions; e.g. close account, delete photo, remove friend, etc.
  */
@@ -225,4 +233,14 @@ $btn-class-type:            unquote(".");
 
 #{$btn-class-type}btn--hard {
     border-radius:0;
+}
+
+#{$btn-class-type}btn--icon {
+    font-weight:700;
+    @extend %btn;
+    line-height:2;
+    padding-left:12px;
+    padding-right:12px;
+    position:relative;
+    top:-2px;
 }

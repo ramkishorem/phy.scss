@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    $LOGO
+\*------------------------------------*/
+
+.logo {
+    text-align: left;
+    padding:0;
+    margin-bottom:-7px;
+    margin-top:-1px;
+    &.dashboard-logo {
+        padding:$base-spacing-unit/2;
+        color:$brand-color-complement;
+    }
+}
+
+.logo__img {
+    width:296px;
+    height:91px;
+    background-image:url(#{$static-url}images/logo.png);
+    background-size:100% 100%;
+}

@@ -1,0 +1,16 @@
+/*------------------------------------*\
+		$CTA
+\*------------------------------------*/
+
+.cta {
+    text-align: center;
+}
+
+.btn--cta {
+    @extend %btn;
+    @extend %btn--brand;
+    @extend %btn--white;
+    margin:$half-spacing-unit;
+    @include font-size(24px);
+    font-weight:700;
+}

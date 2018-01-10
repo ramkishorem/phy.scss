@@ -1,17 +1,58 @@
 /*------------------------------------*\
     $RESPONSIVE-NAV
 \*------------------------------------*/
+$nav-toggle-height:33px;
+.site-nav {
+  
+    /*For width until the break point*/
+    .js & {
+        clip: rect(0 0 0 0);
+        max-height: 0;
+        position: absolute;
+        display: block;
+        @include grid-media-query('site-nav-mobile') {
+            overflow: hidden;
+        }
+        zoom: 1;    
+    }
 
-#nav-toggle {
-	@include media-query($site-nav-fold-breakpoint) {
-		display: none;
-	}
-	
-	/* style as per the theme */
-	@extend #{$btn-class-type}btn;
-	@extend #{$btn-class-type}btn--small;
-	@extend #{$btn-class-type}btn--brand-border;
-	position: absolute;
-	right:$base-spacing-unit;
-	top:30px;
+    &.opened {
+        max-height: 9999px;
+    }
+
+    @include media-query($site-nav-breakpoint) {
+        .js & {
+            position: relative;
+            max-height: none;
+        }
+    }
+}
+
+    .site-nav__container {
+        position: relative;
+        @include grid-media-query('site-nav-mobile') {
+            padding-bottom:$nav-toggle-height;
+        }
+    }
+
+.nav-toggle {
+    @include media-query($site-nav-breakpoint) {
+        display: none;
+    }
+    text-align: center;
+    width: 100%;
+    line-height:$nav-toggle-height;
+
+    position: absolute;
+    //left:0px;
+    bottom: 0;
+    border-top:1px solid $base-ui-color;
+    border-bottom:1px solid $base-ui-color;
+    color:$brand-color-complement;
+    &:focus {
+        outline:0;
+    }
+    &:hover {
+        color:inherit;
+    }
 }

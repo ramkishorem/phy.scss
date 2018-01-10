@@ -77,7 +77,7 @@ $mobile-first:          true!default;
 /**
  * Set the spacing between your grid items.
  */
-$gutter:                $base-spacing-unit!default;
+$gutter:                10px!default;
 
 
 /**
@@ -113,13 +113,20 @@ $use-markup-fix:        true!default;
  * your classes (e.g. `.palm--one-half`), the second value is the media query
  * that the breakpoint fires at.
  */
+
+
 $breakpoints: (
-    'palm' '(max-width: 480px)',
-    'lap' '(min-width: 481px) and (max-width: 1023px)',
-    'lap-and-on' '(min-width: 641px)',
-    'portable' '(max-width: 1023px)',
-    'desk' '(min-width: 960px)',
-    'wide' '(min-width: 1200px)'
+    'palm' '(max-width: 40em)',
+    'portable' '(max-width: 59.95em)',
+
+    'site-nav-mobile' '(max-width: #{$before-site-nav-breakpoint})',
+    'site-nav-desk' '(min-width: #{$site-nav-breakpoint})',
+
+    'not-tiny' '(min-width: 30em)',
+    'lap' '(min-width: 40.05em)',
+    'crt' '(min-width: 50em)',
+    'desk' '(min-width: 60em)',
+    'wide' '(min-width: 90em)'
 )!default;
 
 
@@ -133,7 +140,8 @@ $breakpoints: (
  * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
  * have been set to ‘true’.
  */
-$breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk', 'lap-and-on', 'wide')!default;
+$breakpoint-has-widths: ('palm', 'not-tiny','lap', 'portable',
+    'crt', 'desk', 'wide')!default;
 $breakpoint-has-push:   ('palm', 'lap', 'portable', 'desk')!default;
 $breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk')!default;
 
@@ -145,7 +153,7 @@ $breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk')!default;
 $class-type:            unquote(".");
 
 @if $use-silent-classes == true{
-    $class-type:        unquote("%");
+    $class-type:        unquote("%") !global;
 }
 
 
@@ -153,15 +161,17 @@ $class-type:            unquote(".");
 
 
 /*------------------------------------*\
-    $MIXINS
+    GRIDS - $MIXINS
 \*------------------------------------*/
+
 /**
  * These mixins are for the library to use only, you should not need to modify
  * them at all.
  *
  * Enclose a block of code with a media query as named in `$breakpoints`.
  */
-@mixin grid-media-query($media-query){
+
+@mixin grid-media-query($media-query) {
     $breakpoint-found: false;
 
     @each $breakpoint in $breakpoints{
@@ -716,4 +726,15 @@ $class-type:            unquote(".");
     }
 
 
+}
+
+
+.grid {
+    @extend %grid;
+}
+
+.grid__half {
+    @extend %grid__item;
+    @extend %one-whole;
+    @extend %lap--one-half;
 }

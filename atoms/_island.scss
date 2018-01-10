@@ -16,12 +16,19 @@
 .islet{
     display:block;
     @extend .cf;
+    padding-left:$half-spacing-unit;
+    padding-right:$half-spacing-unit;
 }
-.island{
-    padding:$base-spacing-unit;
+.island {
+    @include media-query(40.05em) {
+      padding-left:$base-spacing-unit;
+      padding-right:$base-spacing-unit;
+    }
+
 }
     .island > :last-child,
-    .islet > :last-child{
+    .islet > :last-child,
+    .island-without-margin > :last-child{
         margin-bottom:0;
     }
 
@@ -30,5 +37,4 @@
  * Just like `.island`, only smaller.
  */
 .islet{
-    padding:$half-spacing-unit;
 }

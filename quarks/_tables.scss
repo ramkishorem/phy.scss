@@ -10,3 +10,13 @@ td {
 	@extend %base-table-cell-padding;
     text-align:left;
 }
+
+// to avoid breaking tables on print medium
+@media print
+{
+    table,
+    table tr td,
+    table tr th {
+        page-break-inside: avoid;
+    }
+}
