@@ -56,7 +56,8 @@ I'll list my inspirations in the order of my exposure to them.
 * [The “Other” Interface: Atomic Design With Sass](http://coding.smashingmagazine.com/2013/08/02/other-interface-atomic-design-sass/) - Smashing Magazine article by Robin Rendle. This article inspired my folder names and the module structure.
 
 
-License
+## License
+
 The MIT License (MIT)
 
 Copyright (c) 2012-2017 Ramkishore M
